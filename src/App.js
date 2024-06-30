@@ -10,7 +10,7 @@ function App() {
      <Routes>
      <Route exact path='/' element={<Category/>} />
 
-     <Route path='/list' element={<CategoryList/>} />
+     <Route path='/list/:id/:name' element={<CategoryList/>} />
 
      <Route exact path='/rating' element={<Rating/>} />
 
