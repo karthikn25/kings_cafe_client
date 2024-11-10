@@ -26,3 +26,11 @@ const categorySlice = createSlice({
         }
     }
 })
+
+export const {
+    getAllCategoryRequest,
+    getAllCategorySuccess,
+    getAllCategoryFail
+}=categorySlice.actions;
+
+export default categorySlice.reducer;
