@@ -34,7 +34,7 @@ export default function Category() {
                   <div id="category-p-img">
                     <img src={d.picture} alt="product" />
                   </div>
-                  <h6 style={{fontFamily:"cursive"}}>{d.name}</h6>
+                  <h6 style={{fontFamily:"cursive",textTransform:"capitalize"}}>{d.name}</h6>
                 </div>
               ))}
           </div>
