@@ -35,7 +35,7 @@ export default function CategoryList() {
       <Base>
         <div id="category-list-container">
           <div id="category-list-head">
-            <h5>{name}</h5>
+            <h5 style={{fontFamily:"cursive"}}>{name}</h5>
             <i className="bx bx-home" onClick={() => navigate("/")} />
           </div>
 
@@ -57,20 +57,22 @@ export default function CategoryList() {
                   </div>
                   
                   
-                  <p style={{fontFamily:"cursive"}}>Rs: {d.price}</p></div>
+                  <p id="food-price" style={{fontFamily:"cursive"}}>Rs: {d.price}</p></div>
                     
                     <div id="f-status">{!d.status && <p style={{ color: 'red' ,fontFamily:"cursive"}}>Out of Stock</p>}
                     </div>
-
-                  </div>
-                  <p
+                    <p
                     id="category-detail"
                     style={{ display: expandedItemId === d._id ? "block" : "none" ,fontFamily:"cursive"}}
                   >
                     {d.details}
                   </p>
+                  </div>
+                 
                 </div>
+                
               </div>
+              
             ))}
           </div>
         </div>
