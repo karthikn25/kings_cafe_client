@@ -104,12 +104,7 @@ export default function Category() {
                     {d.name}
                   </h6>
 
-                  {/* Ratings (Example with stars) */}
-                  <div className="category-rating">
-                    <span>{d.rating || 0} </span>
-                    <span>{'★'.repeat(Math.round(d.rating))}</span>
-                    <span>{'☆'.repeat(5 - Math.round(d.rating))}</span>
-                  </div>
+                
                 </div>
               ))}
           </div>
