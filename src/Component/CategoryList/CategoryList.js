@@ -45,39 +45,6 @@ export default function CategoryList() {
                 key={d.id} // Ensure each item has a unique key
                 id="category-list-item-box"
                 onClick={() => toggle(d._id)}
-<<<<<<< HEAD
-                style={{
-                  height:
-                    expandedItemId === d._id || !d.status
-                      ? "max-content"
-                      : "50px",
-                  opacity: d.status ? 1 : 0.5,
-                }}
-              >
-                <div id="category-lists">
-                  <div id="show-container">
-                    <div id="f-detail">
-                      <div id="f-details">
-                        <img src={d.photo} alt={d.foodName} />
-                        <h6 style={{ fontFamily: "cursive" }}>{d.foodName}</h6>
-                      </div>
-
-                      <p style={{ fontFamily: "cursive" }}>Rs: {d.price}</p>
-                    </div>
-
-                    <div id="f-status" style={{ fontFamily: "cursive" }}>
-                      {!d.status && (
-                        <p style={{ color: "red" }}>Out of Stock</p>
-                      )}
-                    </div>
-                  </div>
-                  <p
-                    id="category-detail"
-                    style={{
-                      display: expandedItemId === d._id ? "block" : "none",
-                      fontFamily: "cursive",
-                    }}
-=======
                 style={{ height: expandedItemId === d._id || !d.status ? "max-content" : "50px" ,opacity: d.status ? 1 : 0.5, }}
               >
                 <div id="category-lists">
@@ -86,20 +53,19 @@ export default function CategoryList() {
                   <div id="f-detail">
                   <div id="f-details">
                   <img src={d.photo} alt={d.foodName}/>
-                  <h6>{d.foodName}</h6>
+                  <h6 style={{fontFamily:"cursive"}}>{d.foodName}</h6>
                   </div>
                   
                   
-                  <p>Rs: {d.price}</p></div>
+                  <p style={{fontFamily:"cursive"}}>Rs: {d.price}</p></div>
                     
-                    <div id="f-status">{!d.status && <p style={{ color: 'red' }}>Out of Stock</p>}
+                    <div id="f-status">{!d.status && <p style={{ color: 'red' ,fontFamily:"cursive"}}>Out of Stock</p>}
                     </div>
 
                   </div>
                   <p
                     id="category-detail"
-                    style={{ display: expandedItemId === d._id ? "block" : "none" }}
->>>>>>> 340fb2a05b439d4b834081f5ac35aab245f439c7
+                    style={{ display: expandedItemId === d._id ? "block" : "none" ,fontFamily:"cursive"}}
                   >
                     {d.details}
                   </p>

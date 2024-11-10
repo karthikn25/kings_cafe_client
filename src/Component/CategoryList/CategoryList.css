@@ -8,6 +8,7 @@
     content: "";
     background: url(../../Images/cafe\ home\ bg1.jpeg);
     background-size: cover;
+    /* background-repeat: no-repeat; */
     background-attachment: fixed;
     position: absolute;
     top: 0px;
@@ -33,7 +34,6 @@
     justify-content: center;
     align-items: center;
     gap: 200px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     >i{
         font-size: 30px;
         color: brown;
@@ -51,32 +51,23 @@
     width: 100%;
     cursor: pointer;
 }
-
 #show-container{
     margin-bottom: 0;
     padding-bottom: 0;
-    
-  >#f-detail{
+   >#f-detail{
     display: flex;
+    gap: 0px 100px;
+    width: 35px;
+    border-radius: 50%;
         
-45f439c7
-x;
-        width: 35px;
-        border-radius: 50%;
-    }
+  }
     >h6{
         padding: 10px;
     }
 }
     
    
-    >p{
-        color: black;
-        padding-t    10px;
-       }
-   }
    
-}
 #category-detail{
     color: black;
 }
@@ -166,4 +157,4 @@ x;
         width: 100%;
     
     }
-}}})})}}}} */ */
+}
