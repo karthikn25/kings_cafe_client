@@ -153,7 +153,7 @@ export default function Category() {
   }, [dispatch]);
 
   // Filter categories based on search input
-  const filteredCategory = categoryInfo.category.filter((item) =>
+  const filteredCategory = categoryInfo.category&& categoryInfo.category.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -180,10 +180,10 @@ export default function Category() {
 
           {/* Category List */}
           <div className="category-item-container">
-            {filteredCategory.length === 0 && !loading ? (
+            {filteredCategory&&filteredCategory.length === 0 && !loading ? (
               <div>No categories found</div>
             ) : (
-              filteredCategory.map((d) => (
+              filteredCategory&&filteredCategory.map((d) => (
                 <div
                   key={d._id}
                   id="category-item-box"
