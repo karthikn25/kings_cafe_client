@@ -3,6 +3,7 @@ import './App.css';
 import Category from './Component/Category/Category';
 import CategoryList from './Component/CategoryList/CategoryList';
 import Rating from './Component/Rating/Rating';
+import Search from './Component/Search/Search';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
 
      <Route path='/list/:id/:name' element={<CategoryList/>} />
 
-     <Route exact path='/rating' element={<Rating/>} />
+     <Route path='/rating' element={<Rating/>} />
 
+     <Route path='/search/:keyword' element={<Search/>}/>
 
      </Routes>
     </div>

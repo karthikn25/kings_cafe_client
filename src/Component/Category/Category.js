@@ -145,7 +145,7 @@ export default function Category() {
   // Get category data, error, and loading state from Redux store
   const { categoryInfo, error, loading } = useSelector((state) => state.category);
 
-  const [search, setSearch] = useState(""); // Manage search input
+  const [keyword, setKeyword] = useState(""); // Manage search input
 
   // Fetch categories when the component mounts
   useEffect(() => {
@@ -154,31 +154,27 @@ export default function Category() {
 
   // Filter categories based on search input
   const filteredCategory = categoryInfo.category&& categoryInfo.category.filter((item) =>
-    item.name.toLowerCase().includes(search.toLowerCase())
+    item.name.toLowerCase().includes(keyword.toLowerCase())
   );
 
   return (
     <div id="category">
       <Base>
         <div id="category-container">
-          {/* Search Bar */}
           <div id="search-container">
             <input
               type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              value={keyword}
+              onChange={(e) => setKeyword(e.target.value)}
               placeholder="Search for a category..."
             />
             <i className="bx bx-search"></i>
           </div>
 
-          {/* Loading state */}
           {loading && <div>Loading...</div>}
 
-          {/* Error state */}
           {error && <div style={{ color: "red" }}>{error}</div>}
 
-          {/* Category List */}
           <div className="category-item-container">
             {filteredCategory&&filteredCategory.length === 0 && !loading ? (
               <div>No categories found</div>
