@@ -168,8 +168,10 @@ export default function CategoryList() {
                           <p style={{ color: "red", fontFamily: "cursive" }}>Out of Stock</p>
                         )}
                       </div>
-
-                      <p
+                   
+                      
+                    </div>
+                    <p
                         className="category-detail"
                         style={{
                           display: expandedItemId === d._id ? "block" : "none",
@@ -178,7 +180,6 @@ export default function CategoryList() {
                       >
                         {d.details}
                       </p>
-                    </div>
                   </div>
                 </div>
               ))}
