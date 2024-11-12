@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./CategoryList.css";
-import Base from "../../Base/Base";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllFoods } from "../../Redux/Actions/foodAction";
+import Base from '../../Base/Base'
 
 export default function CategoryList() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,15 @@ export default function CategoryList() {
         setLoading(false);
       }
     };
+
+    // Initial fetch
     fetchFood();
+
+    // Set interval to refresh data every 1 minute (60000 ms)
+    const interval = setInterval(fetchFood, 60000);
+
+    // Cleanup the interval when component unmounts
+    return () => clearInterval(interval);
   }, [id, dispatch]); // Include 'id' as a dependency to refetch when category changes
 
   const toggle = (itemId) => {
@@ -78,21 +86,18 @@ export default function CategoryList() {
 
                       <div className="f-status">
                         {!d.status && (
-                          <p style={{ color: "red"}}>Out of Stock</p>
+                          <p style={{ color: "red" }}>Out of Stock</p>
                         )}
                       </div>
-                   
-                      
                     </div>
                     <p
-                        className="category-detail"
-                        style={{
-                          display: expandedItemId === d._id ? "block" : "none",
-                         
-                        }}
-                      >
-                        {d.details}
-                      </p>
+                      className="category-detail"
+                      style={{
+                        display: expandedItemId === d._id ? "block" : "none",
+                      }}
+                    >
+                      {d.details}
+                    </p>
                   </div>
                 </div>
               ))}
