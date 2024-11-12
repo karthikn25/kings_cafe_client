@@ -148,6 +148,9 @@
         font-family:sans-serif;
       }
     }
+    #category-list-head > h5 {
+      font-family: "sans-serif";
+    }
     #category-list-container {
       font-family: sans-serif
     }
