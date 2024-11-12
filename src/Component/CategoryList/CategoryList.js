@@ -123,7 +123,7 @@ export default function CategoryList() {
       <Base>
         <div id="category-list-container">
           <div id="category-list-head">
-            <h5 style={{ fontFamily: "cursive" }}>{name}</h5>
+            <h5 >{name}</h5>
             <i className="bx bx-home" onClick={() => navigate("/")} />
           </div>
 
@@ -156,9 +156,9 @@ export default function CategoryList() {
                       <div className="f-detail">
                         <div className="f-details">
                           <img src={d.photo} alt={d.foodName} />
-                          <h6 style={{ fontFamily: "cursive" }}>{d.foodName}</h6>
+                          <h6>{d.foodName}</h6>
                         </div>
-                        <p className="food-price" style={{ fontFamily: "cursive" }}>
+                        <p className="food-price">
                           Rs: {d.price}
                         </p>
                       </div>
