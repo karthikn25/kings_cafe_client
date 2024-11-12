@@ -167,6 +167,7 @@ export default function Category() {
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
               placeholder="Search for a category..."
+              style={{fontFamily:"cursive"}}
             />
             <i className="bx bx-search"></i>
           </div>
