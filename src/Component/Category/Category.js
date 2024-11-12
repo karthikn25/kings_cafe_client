@@ -188,7 +188,7 @@ export default function Category() {
                   <div id="category-p-img">
                     <img src={d.picture} alt="category" />
                   </div>
-                  <h6 style={{ fontFamily: "cursive", textTransform: "capitalize" }}>
+                  <h6 style={{textTransform: "capitalize" }}>
                     {d.name}
                   </h6>
                 </div>
