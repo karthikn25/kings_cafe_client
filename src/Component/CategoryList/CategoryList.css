@@ -201,6 +201,9 @@
       font-family:sans-serif;
     
     }
+    #category-list-head > h5 {
+      font-family: "sans-serif";
+    }
     .category-lists {
       font-family: sans-serif;
     }
