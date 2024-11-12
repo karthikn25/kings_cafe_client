@@ -148,7 +148,9 @@
         font-family:sans-serif;
       }
     }
-  
+    #category-list-container {
+      font-family: sans-serif
+    }
     .category-lists {
       font-family: sans-serif;
     }
@@ -188,6 +190,9 @@
     #category-list-item-box {
       height: 30px;
       max-width: 300px;
+    }
+    #category-list-container {
+      font-family: sans-serif
     }
     .f-details h6 {
       font-family:sans-serif;

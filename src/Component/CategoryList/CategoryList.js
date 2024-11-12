@@ -123,7 +123,7 @@ export default function CategoryList() {
       <Base>
         <div id="category-list-container">
           <div id="category-list-head">
-            <h5 >{name}</h5>
+            <h5>{name}</h5>
             <i className="bx bx-home" onClick={() => navigate("/")} />
           </div>
 
