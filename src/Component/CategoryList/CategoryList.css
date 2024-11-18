@@ -175,12 +175,12 @@
     }
   
     .f-details img {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
     }
   
     .food-price {
-      font-size: 12px;
+      font-size: 16px;
     }
   
     .category-detail {
@@ -217,12 +217,12 @@
     }
   
     .f-details img {
-      height: 25px;
-      width: 25px;
+      height: 35px;
+      width: 35px;
     }
   
     .food-price {
-      font-size: 10px;
+      font-size: 16px;
     }
   
     .category-detail {
